@@ -47,7 +47,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
         //mMap.setMyLocationEnabled(true);
         //mMap.addMarker(new MarkerOptions().position(new LatLng(0.0,00)));
-        agregarMarcador(0, 0); //-16.53542 -68.08675
+        //agregarMarcador(0, 0); //-16.53542 -68.08675
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
