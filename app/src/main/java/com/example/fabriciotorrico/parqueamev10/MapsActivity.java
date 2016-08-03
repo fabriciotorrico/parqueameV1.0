@@ -47,7 +47,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
         //mMap.setMyLocationEnabled(true);
         //mMap.addMarker(new MarkerOptions().position(new LatLng(0.0,00)));
-        //agregarMarcador(0, 0); //-16.53542 -68.08675
+        //agregarMarcador(-16.53542, -68.08675); //-16.53542 -68.08675
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
@@ -67,6 +67,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         miUbicacion();
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(10, 10))
+                .title("Hello world"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(-16.53542, -68.08675))
+                .title("EMI CHOCO"));
+
         // Add a marker in Sydney and move the camera
         /*Marker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));LatLng sydney = new LatLng(-34, 151);
